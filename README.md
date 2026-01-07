@@ -20,7 +20,9 @@ Example:
 
 ## 📷 Preview
 
-![SafeDep UI demo](demo-screenshot.png)
+![SafeDep UI demo]
+<img width="1300" height="568" alt="image" src="https://github.com/user-attachments/assets/5193fcd3-256d-41ae-a22b-c539e09301a3" />
+
 
 A small demonstration screenshot showing the package details page; replace this with a real screenshot or GIF for your repository.
 

@@ -20,7 +20,7 @@ Example:
 
 ## 📷 Preview
 
-![SafeDep UI demo](/demo-screenshot.png)
+![SafeDep UI demo](demo-screenshot.png)
 
 A small demonstration screenshot showing the package details page; replace this with a real screenshot or GIF for your repository.
 

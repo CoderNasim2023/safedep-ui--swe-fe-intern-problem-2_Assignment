@@ -1,36 +1,149 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# SafeDep UI 🚀
 
-## Getting Started
+A clean and minimal UI for browsing package details and versions built with Next.js (App Router), TypeScript, and Tailwind CSS.
 
-First, run the development server:
+---
+
+## 🔍 Overview
+
+**SafeDep UI** provides a small frontend to view package information using filesystem-based dynamic routes. It's intended as a frontend for exploring package ecosystems, package names, and versions using URLs of the form:
+
+```
+/p/:ecosystem/:name/:version
+```
+
+Example:
+
+`http://localhost:3000/p/npm/nextjs/15.5.4`
+
+---
+
+## 📷 Preview
+
+![SafeDep UI demo](/demo-screenshot.png)
+
+A small demonstration screenshot showing the package details page; replace this with a real screenshot or GIF for your repository.
+
+---
+
+## ⚙️ Features
+
+- Dynamic App Router routes: `app/p/[ecosystem]/[name]/[version]/page.tsx`
+- Built with **Next.js 16 (App Router)** and **TypeScript**
+- Styling with **Tailwind CSS**
+- Minimal, easy-to-read package details page for quick testing and demos
+
+---
+
+## 🧰 Prerequisites
+
+- Node.js 18 or newer
+- npm (or yarn / pnpm)
+
+---
+
+## 🚀 Quick Start
+
+1. Clone the repo
+
+```bash
+git clone <repo-url>
+cd safedep-ui
+```
+
+2. Install dependencies
+
+```bash
+npm install
+```
+
+3. Run the dev server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open in your browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Visit a package route like `http://localhost:3000/p/npm/nextjs/15.5.4` to see the dynamic page in action.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 📁 Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `app/` - Next.js App Router pages and layouts
+  - `app/p/[ecosystem]/[name]/[version]/page.tsx` - dynamic package details page
+- `lib/` - helper utilities
+- `public/` - static assets
+- `styles/` or `globals.css` - global styles
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔧 Environment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project supports a local `.env.local` file for server-only environment variables (Next.js loads `.env.local` automatically during development).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Required variables for SafeDep API access:**
+
+Create a file named `.env.local` at the project root and add:
+
+```env
+SAFEDEP_TENANT_ID=your-tenant-id-here
+SAFEDEP_API_KEY=your-api-key-here
+```
+
+After adding or updating `.env.local`, **restart the dev server** so Next.js picks up the new values:
+
+```bash
+npm run dev
+```
+
+> Tip: Keep secrets out of source control. You can add a `.env.example` with placeholder keys (no real secrets) for other developers to copy.
+
+---
+
+## ✅ Development Notes
+
+- Restart the dev server after adding new top-level routes or folders to ensure Next.js picks up filesystem changes.
+- Lint with:
+
+```bash
+npm run lint
+```
+
+- Build for production:
+
+```bash
+npm run build
+npm start
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome! Please open issues for bugs or feature requests and submit pull requests for changes. Follow these guidelines:
+
+- Fork the repository and create feature branches
+- Keep changes focused and add tests where applicable
+- Use clear commit messages and descriptive PR titles
+
+---
+
+## 📄 License
+
+This repository does not include a LICENSE file. Add a license (for example, `MIT`) to make the project's license explicit.
+
+---
+
+## ✉️ Contact
+
+If you have questions or want help improving the README, open an issue or reach out in the repository.
+
+---
+
+Thank you for using SafeDep UI! 💡

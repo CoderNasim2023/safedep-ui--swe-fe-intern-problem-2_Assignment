@@ -135,17 +135,12 @@ Contributions are welcome! Please open issues for bugs or feature requests and s
 - Use clear commit messages and descriptive PR titles
 
 ---
-
 ## 📄 License
-
-This repository does not include a LICENSE file. Add a license (for example, `MIT`) to make the project's license explicit.
+This repository does not include any  LICENSE file.   to make the project's license explicit.
 
 ---
-
 ## ✉️ Contact
-
 If you have questions or want help improving the README, open an issue or reach out in the repository.
-
 ---
 
 Thank you for using SafeDep UI! 💡
